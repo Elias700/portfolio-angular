@@ -3,7 +3,7 @@
 @import 'tailwindcss';
 
 :root {
-   --color-primary: #2F6690; /* Cor principal */
+  --color-primary: #2F6690; /* Cor principal */
   --color-secondary: #3A7CA5; /* Elementos secundários */
   --color-light: #D9DCD6; /* Fundos claros */
   --color-dark: #16425B; /* Fundo escuro/textos */
