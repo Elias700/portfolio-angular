@@ -5,11 +5,12 @@ import { Home } from "./components/home/home";
 import { About } from './components/about/about';
 import { Projects } from './projects/projects';
 import { Certificados } from './components/certificados/certificados';
+import { Contact } from './components/contact/contact';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Home, About, Projects, Certificados],
+  imports: [RouterOutlet, Header, Home, About, Projects, Certificados, Contact],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
