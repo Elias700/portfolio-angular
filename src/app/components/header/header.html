@@ -1,17 +1,22 @@
+<header
+  class="fixed left-0 top-0 z-50 w-full bg-dark text-light shadow-md"
+>
 
-<header class="w-full bg-dark text-light">
+  <!-- HEADER PRINCIPAL -->
+  <div
+    class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+  >
 
-
-  <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-
+    <!-- LOGO -->
     <a
       href="#home"
       class="flex items-center gap-2"
+      (click)="setActiveSection('home')"
     >
-      <!-- ER -->
+
       <span
-        class="flex h-9 w-9 items-center justify-center rounded-md border 
-        border-accent text-sm font-semibold text-accent"
+        class="flex h-9 w-9 items-center justify-center rounded-md border
+               border-accent text-sm font-semibold text-accent"
       >
         ER
       </span>
@@ -23,62 +28,109 @@
       <span class="text-sm font-semibold lg:hidden">
         Elias.dev
       </span>
+
     </a>
 
 
+    <!-- NAVEGAÇÃO DESKTOP -->
     <nav class="hidden items-center gap-8 lg:flex">
 
+      <!-- HOME -->
       <a
         href="#home"
-        class="relative text-xs text-light transition-colors hover:text-accent
-               after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full
-               after:bg-accent"
+        (click)="setActiveSection('home')"
+        class="relative text-xs text-light transition-colors hover:text-accent"
       >
         Home
+
+        @if (activeSection === 'home') {
+          <span
+            class="absolute -bottom-2 left-0 h-0.5 w-full bg-accent"
+          ></span>
+        }
       </a>
 
+
+      <!-- SOBRE MIM -->
       <a
         href="#sobre"
-        class="text-xs text-light transition-colors hover:text-accent"
+        (click)="setActiveSection('sobre')"
+        class="relative text-xs text-light transition-colors hover:text-accent"
       >
         Sobre Mim
+
+        @if (activeSection === 'sobre') {
+          <span
+            class="absolute -bottom-2 left-0 h-0.5 w-full bg-accent"
+          ></span>
+        }
       </a>
 
+
+      <!-- PROJETOS -->
       <a
         href="#projetos"
-        class="text-xs text-light transition-colors hover:text-accent"
+        (click)="setActiveSection('projetos')"
+        class="relative text-xs text-light transition-colors hover:text-accent"
       >
         Projetos
+
+        @if (activeSection === 'projetos') {
+          <span
+            class="absolute -bottom-2 left-0 h-0.5 w-full bg-accent"
+          ></span>
+        }
       </a>
 
+
+      <!-- CERTIFICADOS -->
       <a
         href="#certificados"
-        class="text-xs text-light transition-colors hover:text-accent"
+        (click)="setActiveSection('certificados')"
+        class="relative text-xs text-light transition-colors hover:text-accent"
       >
         Certificados
+
+        @if (activeSection === 'certificados') {
+          <span
+            class="absolute -bottom-2 left-0 h-0.5 w-full bg-accent"
+          ></span>
+        }
       </a>
 
+
+      <!-- CONTATO -->
       <a
         href="#contato"
-        class="text-xs text-light transition-colors hover:text-accent"
+        (click)="setActiveSection('contato')"
+        class="relative text-xs text-light transition-colors hover:text-accent"
       >
         Contato
+
+        @if (activeSection === 'contato') {
+          <span
+            class="absolute -bottom-2 left-0 h-0.5 w-full bg-accent"
+          ></span>
+        }
       </a>
 
     </nav>
 
 
-    <!-- Botão Hamburguer - Mobile / Tablet -->
+    <!-- BOTÃO HAMBURGUER -->
     <button
       type="button"
-      class="flex h-9 w-9 items-center justify-center rounded-md border border-accent/40
-             text-light transition-colors hover:bg-secondary/20 lg:hidden"
+      class="flex h-9 w-9 items-center justify-center rounded-md
+             border border-accent/40 text-light transition-colors
+             hover:bg-secondary/20 lg:hidden"
       (click)="toggleMenu()"
-      aria-label="Abrir menu"
+      [attr.aria-label]="menuOpen ? 'Fechar menu' : 'Abrir menu'"
+      [attr.aria-expanded]="menuOpen"
     >
 
       @if (!menuOpen) {
 
+        <!-- MENU -->
         <svg
           class="h-5 w-5"
           fill="none"
@@ -95,7 +147,7 @@
 
       } @else {
 
-        <!-- Ícone fechar -->
+        <!-- FECHAR -->
         <svg
           class="h-5 w-5"
           fill="none"
@@ -117,54 +169,68 @@
   </div>
 
 
-  <!-- Menu Mobile / Tablet -->
+  <!-- MENU MOBILE / TABLET -->
   @if (menuOpen) {
 
     <nav
-      class="border-t border-accent/20 bg-dark lg:hidden"
+      class="border-t border-accent/20 bg-dark shadow-lg lg:hidden"
     >
 
+      <!-- HOME -->
       <a
         href="#home"
-        class="block border-b border-accent/20 px-6 py-5 text-sm text-light
-               transition-colors hover:bg-secondary/10 hover:text-accent"
-        (click)="closeMenu()"
+        class="block border-b border-accent/20 px-6 py-5 text-sm
+               text-light transition-colors hover:bg-secondary/10
+               hover:text-accent"
+        (click)="setActiveSection('home')"
       >
         Home
       </a>
 
+
+      <!-- SOBRE MIM -->
       <a
         href="#sobre"
-        class="block border-b border-accent/20 px-6 py-5 text-sm text-light
-               transition-colors hover:bg-secondary/10 hover:text-accent"
-        (click)="closeMenu()"
+        class="block border-b border-accent/20 px-6 py-5 text-sm
+               text-light transition-colors hover:bg-secondary/10
+               hover:text-accent"
+        (click)="setActiveSection('sobre')"
       >
         Sobre Mim
       </a>
 
+
+      <!-- PROJETOS -->
       <a
         href="#projetos"
-        class="block border-b border-accent/20 px-6 py-5 text-sm text-light
-               transition-colors hover:bg-secondary/10 hover:text-accent"
-        (click)="closeMenu()"
+        class="block border-b border-accent/20 px-6 py-5 text-sm
+               text-light transition-colors hover:bg-secondary/10
+               hover:text-accent"
+        (click)="setActiveSection('projetos')"
       >
         Projetos
       </a>
 
+
+      <!-- CERTIFICADOS -->
       <a
         href="#certificados"
-        class="block border-b border-accent/20 px-6 py-5 text-sm text-light
-               transition-colors hover:bg-secondary/10 hover:text-accent"
-        (click)="closeMenu()"
+        class="block border-b border-accent/20 px-6 py-5 text-sm
+               text-light transition-colors hover:bg-secondary/10
+               hover:text-accent"
+        (click)="setActiveSection('certificados')"
       >
         Certificados
       </a>
 
+
+      <!-- CONTATO -->
       <a
         href="#contato"
         class="block px-6 py-5 text-sm text-light
-               transition-colors hover:bg-secondary/10 hover:text-accent"
-        (click)="closeMenu()"
+               transition-colors hover:bg-secondary/10
+               hover:text-accent"
+        (click)="setActiveSection('contato')"
       >
         Contato
       </a>

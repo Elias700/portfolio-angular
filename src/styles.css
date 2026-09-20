@@ -17,3 +17,8 @@
   --color-dark: var(--color-dark);
   --color-accent: var(--color-accent);
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}

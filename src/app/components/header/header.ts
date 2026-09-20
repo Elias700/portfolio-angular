@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class Header {
 
-   menuOpen = false;
+  menuOpen = false;
+  activeSection = 'home';
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
@@ -16,6 +17,11 @@ export class Header {
 
   closeMenu(): void {
     this.menuOpen = false;
+  }
+
+  setActiveSection(section: string): void {
+    this.activeSection = section;
+    this.closeMenu();
   }
   
 }
