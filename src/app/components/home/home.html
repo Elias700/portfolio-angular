@@ -1,7 +1,10 @@
-<section id="home" class="min-h-screen bg-[var(--color-dark)]">
+<section
+  id="home"
+  class="min-h-screen bg-[var(--color-dark)]"
+>
 
   <!-- HERO -->
-  
+
   <div
     class="
       relative
@@ -15,7 +18,7 @@
       lg:justify-center
     "
   >
-    
+
     <!-- GRADIENTE DE FUNDO -->
 
     <div
@@ -31,15 +34,17 @@
     ></div>
 
 
+    <!-- CONTEÚDO PRINCIPAL -->
+
     <main
       class="
         relative
         z-10
         mx-auto
         flex
-        min-h-[calc(100vh-60px)]
+        min-h-[calc(100vh-64px)]
         w-full
-        max-w-[1200px]
+        max-w-[1400px]
         flex-col
         items-center
         justify-center
@@ -48,21 +53,27 @@
 
         md:flex-row
         md:justify-between
-        md:px-[40px]
+        md:gap-8
+        md:px-10
         md:py-0
 
         lg:min-h-screen
-        lg:max-w-[1200px]
-        lg:px-[50px]
+        lg:max-w-[1400px]
+        lg:gap-16
+        lg:px-16
+
+        xl:px-20
       "
     >
+
+      <!-- CONTEÚDO ESQUERDO -->
 
       <div
         class="
           order-2
           flex
           w-full
-          max-w-[520px]
+          max-w-[560px]
           flex-col
           items-center
           text-center
@@ -71,31 +82,29 @@
           md:items-start
           md:text-left
 
-          lg:max-w-[560px]
+          lg:max-w-[680px]
         "
       >
 
-        <!-- ================================================= -->
         <!-- LABEL DESKTOP -->
-        <!-- ================================================= -->
 
         <div
           class="
-            mb-5
+            mb-6
             hidden
             items-center
             gap-2
-            text-[11px]
+            text-xs
             font-medium
             uppercase
-            tracking-wide
+            tracking-[0.18em]
             text-[var(--color-accent)]
 
             lg:flex
           "
         >
 
-          <span class="text-[var(--color-accent)]">
+          <span class="text-lg text-[var(--color-accent)]">
             ›_
           </span>
 
@@ -106,14 +115,12 @@
         </div>
 
 
-        <!-- ================================================= -->
         <!-- LABEL MOBILE / TABLET -->
-        <!-- ================================================= -->
 
         <p
           class="
-            mb-2
-            text-[11px]
+            mb-3
+            text-xs
             font-medium
             uppercase
             tracking-wide
@@ -126,34 +133,40 @@
         </p>
 
 
-        <!-- ================================================= -->
         <!-- NOME -->
-        <!-- ================================================= -->
 
         <h1
           class="
             text-[38px]
             font-extrabold
-            leading-[1]
+            leading-[1.05]
             tracking-[-1.5px]
 
-            md:text-[42px]
+            sm:text-[44px]
 
-            lg:text-[52px]
-            lg:tracking-[-2px]
+            md:text-[48px]
+
+            lg:text-[64px]
+            lg:leading-[1.05]
+            lg:tracking-[-2.5px]
+
+            xl:text-[72px]
           "
         >
           Elias Ribeiro
         </h1>
 
+
+        <!-- SUBTÍTULO MOBILE / TABLET -->
+
         <h2
           class="
-            mt-2
-            text-[15px]
+            mt-3
+            text-base
             font-semibold
             text-[var(--color-accent)]
 
-            md:text-[16px]
+            md:text-lg
 
             lg:hidden
           "
@@ -161,38 +174,46 @@
           Desenvolvedor Web Fullstack
         </h2>
 
+
+        <!-- FRASE DE DESTAQUE DESKTOP -->
+
         <p
           class="
-            mt-3
+            mt-5
             hidden
-            max-w-[530px]
-            text-[15px]
+            max-w-[620px]
+            text-lg
             font-medium
             leading-[1.5]
             text-[var(--color-accent)]
 
             lg:block
+
+            xl:text-xl
           "
         >
           Criando experiências digitais modernas, funcionais e focadas em
           performance.
         </p>
 
+
+        <!-- DESCRIÇÃO -->
+
         <p
           class="
-            mt-4
+            mt-5
             max-w-[430px]
-            text-[12px]
-            leading-[1.65]
+            text-sm
+            leading-[1.7]
             text-[var(--color-light)]
 
-            md:max-w-[460px]
-            md:text-[13px]
+            md:max-w-[500px]
+            md:text-[15px]
 
-            lg:mt-2
-            lg:max-w-[510px]
-            lg:text-[14px]
-            lg:leading-[1.6]
+            lg:mt-4
+            lg:max-w-[620px]
+            lg:text-[17px]
+            lg:leading-[1.7]
           "
         >
           Especializado em construir experiências digitais robustas,
@@ -200,18 +221,21 @@
           abstratas em códigos limpos e funcionais.
         </p>
 
-        <button
-          type="button"
+
+        <!-- BOTÃO -->
+
+        <a
+          href="#projetos"
           class="
-            mt-7
+            mt-8
             flex
             items-center
-            gap-2
-            rounded-[5px]
+            gap-3
+            rounded-md
             bg-[var(--color-secondary)]
-            px-6
-            py-3
-            text-[12px]
+            px-7
+            py-3.5
+            text-sm
             font-semibold
             text-white
             shadow-sm
@@ -221,10 +245,13 @@
             hover:bg-[var(--color-primary)]
             hover:shadow-md
 
-            md:px-6
-            md:py-3
+            md:px-7
+            md:py-3.5
 
-            lg:mt-7
+            lg:mt-9
+            lg:px-8
+            lg:py-4
+            lg:text-base
           "
         >
 
@@ -234,8 +261,8 @@
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="14"
-            height="14"
+            width="17"
+            height="17"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -250,14 +277,17 @@
 
           </svg>
 
-        </button>
+        </a>
+
+
+        <!-- STACK PRINCIPAL -->
 
         <div
           class="
-            mt-7
+            mt-8
             hidden
             items-center
-            gap-2
+            gap-3
 
             lg:flex
           "
@@ -266,7 +296,7 @@
           <span
             class="
               mr-1
-              text-[10px]
+              text-xs
               text-[var(--color-accent)]
             "
           >
@@ -276,29 +306,29 @@
 
           <span
             class="
-              rounded-[3px]
+              rounded-md
               border
               border-white/10
               bg-white/5
-              px-2.5
-              py-1
-              text-[10px]
+              px-3
+              py-1.5
+              text-xs
               text-[var(--color-light)]
             "
           >
-            React
+            Angular
           </span>
 
 
           <span
             class="
-              rounded-[3px]
+              rounded-md
               border
               border-white/10
               bg-white/5
-              px-2.5
-              py-1
-              text-[10px]
+              px-3
+              py-1.5
+              text-xs
               text-[var(--color-light)]
             "
           >
@@ -308,22 +338,23 @@
 
           <span
             class="
-              rounded-[3px]
+              rounded-md
               border
               border-white/10
               bg-white/5
-              px-2.5
-              py-1
-              text-[10px]
+              px-3
+              py-1.5
+              text-xs
               text-[var(--color-light)]
             "
           >
-            Node.js
+            Java
           </span>
 
         </div>
 
       </div>
+
 
       <!-- FOTO / LADO DIREITO -->
 
@@ -338,9 +369,11 @@
 
           md:order-2
           md:mb-0
-          md:mr-8
+          md:mr-4
 
-          lg:mr-[70px]
+          lg:mr-8
+
+          xl:mr-12
         "
       >
 
@@ -355,13 +388,17 @@
             border
             border-[var(--color-primary)]
 
-            md:h-[180px]
-            md:w-[180px]
+            md:h-[210px]
+            md:w-[210px]
 
-            lg:h-[230px]
-            lg:w-[230px]
+            lg:h-[290px]
+            lg:w-[290px]
+
+            xl:h-[330px]
+            xl:w-[330px]
           "
         ></div>
+
 
         <!-- CÍRCULO INTERMEDIÁRIO -->
 
@@ -374,13 +411,17 @@
             border
             border-[var(--color-accent)]
 
-            md:h-[164px]
-            md:w-[164px]
+            md:h-[194px]
+            md:w-[194px]
 
-            lg:h-[214px]
-            lg:w-[214px]
+            lg:h-[274px]
+            lg:w-[274px]
+
+            xl:h-[314px]
+            xl:w-[314px]
           "
         ></div>
+
 
         <!-- FOTO -->
 
@@ -391,20 +432,23 @@
             w-[150px]
             overflow-hidden
             rounded-full
-            border-[2px]
+            border-2
             border-[var(--color-accent)]
             bg-[var(--color-dark)]
 
-            md:h-[150px]
-            md:w-[150px]
+            md:h-[180px]
+            md:w-[180px]
 
-            lg:h-[198px]
-            lg:w-[198px]
+            lg:h-[258px]
+            lg:w-[258px]
+
+            xl:h-[298px]
+            xl:w-[298px]
           "
         >
 
           <img
-            src="/assets/profile.jpg"
+            src="/elias.png"
             alt="Elias Ribeiro"
             class="
               block
@@ -413,61 +457,6 @@
               object-cover
             "
           />
-
-        </div>
-
-        <!-- ÍCONE DE CADEADO -->
-        
-        <div
-          class="
-            absolute
-            -bottom-2
-            -left-5
-            flex
-            h-[21px]
-            w-[21px]
-            items-center
-            justify-center
-            rounded-full
-            border
-            border-[var(--color-accent)]
-            bg-[var(--color-dark)]
-
-            md:-left-4
-
-            lg:-bottom-1
-            lg:-left-6
-            lg:h-[22px]
-            lg:w-[22px]
-          "
-        >
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="11"
-            height="11"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-
-            <rect
-              width="18"
-              height="11"
-              x="3"
-              y="11"
-              rx="2"
-              ry="2"
-            ></rect>
-
-            <path
-              d="M7 11V7a5 5 0 0 1 10 0v4"
-            ></path>
-
-          </svg>
 
         </div>
 
