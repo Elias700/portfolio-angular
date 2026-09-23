@@ -1,199 +1,188 @@
-
 <section id="sobre" class="min-h-screen bg-light px-6 py-16 lg:px-16">
 
-  <div
-    class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-20"
-  >
+  <div class="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-20">
 
     <!-- IMAGEM -->
     <div class="relative mx-auto w-full max-w-[460px]">
 
-      <!-- Fundo atrás da imagem -->
-      <div
-        class="absolute -bottom-5 -left-5 h-full w-full rounded-3xl bg-accent/20"
-      ></div>
-
       <!-- Borda pontilhada -->
-      <div
-        class="absolute -right-5 -top-5 h-full w-full rounded-3xl border-2 border-dashed border-accent"
-      ></div>
+      <div class="absolute -right-5 -top-5 h-full w-full rounded-3xl border-2 border-dashed border-accent"></div>
 
       <!-- Imagem -->
-      <div
-        class="relative z-10 aspect-square overflow-hidden rounded-3xl"
-      >
-        <img
-          src="assets/images/sobre-mim.jpg"
-          alt="Desenvolvedor trabalhando em seu computador"
-          class="h-full w-full object-cover"
-        />
+      <div class="relative z-10 aspect-square overflow-hidden rounded-3xl">
+        <img src="/elias-about.jpg" alt="Desenvolvedor trabalhando em seu computador"
+          class="h-full w-full object-cover" />
       </div>
 
     </div>
 
 
-    <!-- CONTEÚDO -->
     <div class="w-full">
 
-      <!-- TÍTULO -->
       <div class="mb-10">
 
-        <h2
-          class="text-4xl font-bold text-dark md:text-5xl"
-        >
+        <h2 class="text-4xl font-bold text-dark md:text-5xl">
           Sobre Mim
         </h2>
 
-        <div
-          class="mt-4 h-1 w-20 rounded-full bg-secondary"
-        ></div>
+        <div class="mt-4 h-1 w-20 rounded-full bg-secondary"></div>
 
       </div>
 
-
-      <!-- DESCRIÇÃO -->
-      <p
-        class="mb-10 max-w-2xl text-base leading-7 text-dark/90 md:text-lg"
-      >
+      <p class="mb-10 max-w-2xl text-base leading-7 text-dark/90 md:text-lg">
         Sou um desenvolvedor web apaixonado por criar soluções digitais
-        elegantes e funcionais. Com experiência em React, Node.js, TypeScript
+        elegantes e funcionais. Com experiência em Angular, TypeScript, TailwindCSS
         e design responsivo, busco sempre entregar projetos que combinam
         performance, usabilidade e estética moderna.
       </p>
 
 
-      <!-- CARDS -->
-      <div
-        class="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-3"
-      >
-
-        <!-- EXPERIÊNCIA -->
-        <div
-          class="rounded-2xl bg-white p-5 shadow-sm"
-        >
-
-          <div
-            class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15"
-          >
-            <span class="text-xl text-secondary">💼</span>
-          </div>
-
-          <p
-            class="text-3xl font-bold text-secondary"
-          >
-            5+
-          </p>
-
-          <p
-            class="mt-1 text-sm font-semibold text-dark"
-          >
-            Anos de Experiência
-          </p>
-
-        </div>
-
-
-        <!-- PROJETOS -->
-        <div
-          class="rounded-2xl bg-white p-5 shadow-sm"
-        >
-
-          <div
-            class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15"
-          >
-            <span class="text-xl text-secondary">&gt;_</span>
-          </div>
-
-          <p
-            class="text-3xl font-bold text-secondary"
-          >
-            50+
-          </p>
-
-          <p
-            class="mt-1 text-sm font-semibold text-dark"
-          >
-            Projetos Entregues
-          </p>
-
-        </div>
-
-
-        <!-- CLIENTES -->
-        <div
-          class="rounded-2xl bg-white p-5 shadow-sm"
-        >
-
-          <div
-            class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15"
-          >
-            <span class="text-xl text-secondary">☺</span>
-          </div>
-
-          <p
-            class="text-3xl font-bold text-secondary"
-          >
-            30+
-          </p>
-
-          <p
-            class="mt-1 text-sm font-semibold text-dark"
-          >
-            Clientes Satisfeitos
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- TECNOLOGIAS -->
       <div>
 
-        <p
-          class="mb-4 text-xs font-bold uppercase text-dark/60"
-        >
+        <p class="mb-4 text-xs font-bold uppercase text-dark/60">
           Tecnologias Principais
         </p>
 
-        <div
-          class="flex flex-wrap gap-2"
-        >
+        <div class="flex flex-wrap gap-2">
 
           <span
-            class="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-dark"
+            class="
+              cursor-pointer 
+              rounded-full 
+              bg-accent 
+              px-4 py-2 
+              text-sm 
+              font-semibold 
+              text-dark 
+              transition-all 
+              duration-300 
+              hover:-translate-y-1 
+              hover:bg-secondary 
+              hover:text-light 
+              hover:shadow-lg
+            "
           >
-            React
+            Angular
           </span>
 
           <span
-            class="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-dark"
-          >
-            Node.js
+            class="
+                cursor-pointer
+                rounded-full 
+                bg-accent 
+                px-4 py-2 
+                text-sm 
+                font-semibold 
+                text-dark 
+                transition-all 
+                duration-300 
+                hover:-translate-y-1 
+                hover:bg-secondary 
+                hover:text-light 
+                hover:shadow-lg
+              "
+            >
+            Java
           </span>
 
           <span
-            class="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-dark"
-          >
+            class="
+                cursor-pointer
+                rounded-full 
+                bg-accent 
+                px-4 py-2 
+                text-sm 
+                font-semibold 
+                text-dark 
+                transition-all 
+                duration-300 
+                hover:-translate-y-1 
+                hover:bg-secondary 
+                hover:text-light 
+                hover:shadow-lg
+              "
+            >
             TypeScript
           </span>
 
           <span
-            class="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-dark"
-          >
-            Python
-          </span>
-
-          <span
-            class="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-dark"
-          >
+            class="
+                cursor-pointer
+                rounded-full 
+                bg-accent 
+                px-4 py-2 
+                text-sm 
+                font-semibold 
+                text-dark 
+                transition-all 
+                duration-300 
+                hover:-translate-y-1 
+                hover:bg-secondary 
+                hover:text-light 
+                hover:shadow-lg
+              "
+            >
             Figma
           </span>
 
           <span
-            class="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-dark"
-          >
+            class="
+                cursor-pointer
+                rounded-full 
+                bg-accent 
+                px-4 py-2 
+                text-sm 
+                font-semibold 
+                text-dark 
+                transition-all 
+                duration-300 
+                hover:-translate-y-1 
+                hover:bg-secondary 
+                hover:text-light 
+                hover:shadow-lg
+              "
+            >
             Git
+          </span>
+
+          <span
+            class="
+                cursor-pointer
+                rounded-full 
+                bg-accent 
+                px-4 py-2 
+                text-sm 
+                font-semibold 
+                text-dark 
+                transition-all 
+                duration-300 
+                hover:-translate-y-1 
+                hover:bg-secondary 
+                hover:text-light 
+                hover:shadow-lg
+              "
+            >
+            GitHub
+          </span>
+
+          <span
+            class="
+                cursor-pointer
+                rounded-full 
+                bg-accent 
+                px-4 py-2 
+                text-sm 
+                font-semibold 
+                text-dark 
+                transition-all 
+                duration-300 
+                hover:-translate-y-1 
+                hover:bg-secondary 
+                hover:text-light 
+                hover:shadow-lg
+              "
+              >
+            TailwindCSS
           </span>
 
         </div>
