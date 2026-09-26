@@ -2,6 +2,12 @@
 
 @import 'tailwindcss';
 
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
 :root {
   --color-primary: #2F6690; /* Cor principal */
   --color-secondary: #3A7CA5; /* Elementos secundários */
@@ -18,7 +24,18 @@
   --color-accent: var(--color-accent);
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 64px;
+/* SCROLL REVEAL */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.scroll-reveal-show {
+  opacity: 1;
+  transform: translateY(0);
 }
