@@ -1,0 +1,203 @@
+<div class="w-full rounded-2xl bg-white p-6 shadow-lg sm:p-8 md:p-10">
+
+    <form #formulario="ngForm" (ngSubmit)="enviarMensagem(formulario)" class="space-y-5">
+
+        <div>
+
+            <label for="nome" class="mb-2 block text-sm font-semibold text-dark">
+                Nome Completo
+            </label>
+
+            <input 
+                id="nome" 
+                type="text" 
+                name="nome" 
+                ngModel 
+                required 
+                minlength="3" 
+                maxlength="100" 
+                autocomplete="name"
+                placeholder="Digite seu nome..." 
+                #campoNome="ngModel" 
+                class="
+                    w-full rounded-lg border border-dark/15 
+                    bg-white px-4 py-3 text-sm text-dark 
+                    outline-none transition-all
+                    placeholder:text-dark/30
+                    focus:border-secondary focus:ring-2 
+                    focus:ring-accent/30
+                "
+                [class.border-red-500]="campoNome.touched && campoNome.invalid"
+                [class.border-emerald-600]="campoNome.touched && campoNome.valid
+            ">
+
+            <!-- ERROS DO NOME -->
+
+            @if (campoNome.touched && campoNome.errors?.['required']) {
+
+            <span class="mt-1 block text-sm text-red-700">
+                O nome é obrigatório.
+            </span>
+
+            }
+
+            @if (campoNome.touched && campoNome.errors?.['minlength']) {
+
+            <span class="mt-1 block text-sm text-red-700">
+                O nome deve ter pelo menos 3 caracteres.
+            </span>
+
+            }
+
+            @if (campoNome.touched && campoNome.valid) {
+
+            <span class="mt-1 block text-sm text-emerald-800">
+                Nome válido.
+            </span>
+
+            }
+
+        </div>
+
+
+        <div>
+
+            <label for="email" class="mb-2 block text-sm font-semibold text-dark">
+                E-mail
+            </label>
+
+            <input 
+                id="email" 
+                type="email" 
+                name="email" 
+                ngModel 
+                required 
+                email 
+                maxlength="150" 
+                autocomplete="email"
+                placeholder="Digite seu e-mail de contato..." 
+                #campoEmail="ngModel" 
+                class="
+                    w-full rounded-lg border border-dark/15 
+                    bg-white px-4 py-3 text-sm text-dark 
+                    outline-none transition-all
+                    placeholder:text-dark/30 focus:border-secondary 
+                    focus:ring-2 focus:ring-accent/30
+                "
+                [class.border-red-500]="campoEmail.touched && campoEmail.invalid"
+                [class.border-emerald-600]="campoEmail.touched && campoEmail.valid
+            ">
+
+            <!-- ERROS DO E-MAIL -->
+
+            @if (campoEmail.touched && campoEmail.errors?.['required']) {
+
+            <span class="mt-1 block text-sm text-red-700">
+                O e-mail é obrigatório.
+            </span>
+
+            }
+
+            @if (
+            campoEmail.touched &&
+            campoEmail.errors?.['email']
+            ) {
+
+            <span class="mt-1 block text-sm text-red-700">
+                Digite um e-mail válido.
+            </span>
+
+            }
+
+            @if (campoEmail.touched && campoEmail.valid) {
+
+            <span class="mt-1 block text-sm text-emerald-800">
+                E-mail válido.
+            </span>
+
+            }
+
+        </div>
+
+
+        <div>
+
+            <label for="mensagem" class="mb-2 block text-sm font-semibold text-dark">
+                Mensagem
+            </label>
+
+            <textarea 
+                id="mensagem" 
+                name="mensagem" 
+                ngModel 
+                required 
+                minlength="10" 
+                maxlength="1000" 
+                rows="5"
+                placeholder="Como posso te ajudar?" 
+                #campoMensagem="ngModel" 
+                class="
+                    w-full resize-none rounded-lg 
+                    border border-dark/15 bg-white 
+                    px-4 py-3 text-sm text-dark outline-none
+                    transition-all placeholder:text-dark/30
+                    focus:border-secondary focus:ring-2 
+                    focus:ring-accent/30
+                "
+                [class.border-red-500]="campoMensagem.touched && campoMensagem.invalid"
+                [class.border-emerald-600]="campoMensagem.touched && campoMensagem.valid
+            ">
+            </textarea>
+
+
+            <!-- ERROS DA MENSAGEM -->
+
+            @if (
+            campoMensagem.touched &&
+            campoMensagem.errors?.['required']
+            ) {
+
+            <span class="mt-1 block text-sm text-red-700">
+                A mensagem é obrigatória.
+            </span>
+
+            }
+
+            @if (
+            campoMensagem.touched &&
+            campoMensagem.errors?.['minlength']
+            ) {
+
+            <span class="mt-1 block text-sm text-red-700">
+                A mensagem deve ter pelo menos 10 caracteres.
+            </span>
+
+            }
+
+            @if (campoMensagem.touched && campoMensagem.valid) {
+
+            <span class="mt-1 block text-sm text-emerald-800">
+                Mensagem válida.
+            </span>
+
+            }
+
+        </div>
+
+
+        <button 
+            type="submit" 
+            [disabled]="formulario.invalid" 
+            class="
+                w-full rounded-lg bg-dark px-6 py-3.5 text-sm font-bold
+                text-white transition-all duration-300
+                hover:bg-secondary cursor-pointer
+                disabled:cursor-not-allowed
+                disabled:opacity-50
+            ">
+            Enviar Mensagem
+        </button>
+
+    </form>
+
+</div>

@@ -1,22 +1,12 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { ContactForm } from './contact-form/contact-form';
 
 @Component({
   selector: 'app-contact',
-  imports: [ FormsModule, CommonModule ],
+  imports: [ ContactForm ],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
 export class Contact {
-
-  nome = '';
-  email = '';
-  mensagem = '';
-
-  enviarMensagem(formulario: NgForm) {
-    console.log('Mensagem enviada!');
-    formulario.reset();
-  }
 
 }
