@@ -1,0 +1,193 @@
+@if (certificado()) {
+
+<div class="
+      fixed
+      inset-0
+      z-50
+      flex
+      items-center
+      justify-center
+      bg-dark/95
+      p-4
+      backdrop-blur-sm
+      sm:p-6
+    " (click)="fecharModal()">
+
+    <!-- CONTEÚDO DO MODAL -->
+    <div class="
+        relative
+        flex
+        max-h-[95vh]
+        w-full
+        max-w-5xl
+        flex-col
+        overflow-hidden
+        rounded-2xl
+        border
+        border-secondary/60
+        bg-dark
+        shadow-2xl
+      " (click)="$event.stopPropagation()">
+
+        <!-- CABEÇALHO -->
+        <div class="
+            flex
+            items-start
+            justify-between
+            gap-4
+            border-b
+            border-secondary/50
+            bg-secondary/20
+            px-5
+            py-4
+            sm:px-6
+        ">
+
+            <div class="min-w-0">
+
+                <h3 class="
+                    truncate
+                    text-lg
+                    font-bold
+                    text-light
+                    sm:text-xl
+                ">
+                    {{ certificado()!.titulo }}
+                </h3>
+
+                <p 
+                    class="
+                        mt-1
+                        text-sm
+                        text-light/70
+                ">
+                    {{ certificado()!.instituicao }}
+                    ·
+                    {{ certificado()!.ano }}
+                </p>
+
+            </div>
+
+
+            <!-- BOTÃO FECHAR -->
+            <button 
+                type="button" 
+                (click)="fecharModal()" aria-label="Fechar certificado" 
+                class="
+                    flex
+                    h-9
+                    w-9
+                    shrink-0
+                    cursor-pointer
+                    items-center
+                    justify-center
+                    rounded-lg
+                    text-light/70
+                    transition
+                    duration-200
+                    hover:bg-secondary
+                    hover:text-light
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-accent">
+
+                <svg 
+                    class="h-5 w-5" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2"
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"
+                >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- IMAGEM DO CERTIFICADO -->
+        <div class="
+          flex
+          min-h-0
+          flex-1
+          items-center
+          justify-center
+          overflow-auto
+          bg-primary/10
+          p-4
+          sm:p-6
+        ">
+
+            <img 
+                [src]="certificado()!.imagem" 
+                [alt]="'Certificado ' + certificado()!.titulo" 
+                class="
+                    max-h-[70vh]
+                    w-auto
+                    max-w-full
+                    rounded-lg
+                    border
+                    border-secondary/40
+                    object-contain
+                    shadow-lg" />
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+        <div class="
+          flex
+          flex-col
+          gap-3
+          border-t
+          border-secondary/50
+          bg-secondary/20
+          px-5
+          py-4
+          sm:flex-row
+          sm:items-center
+          sm:justify-between
+          sm:px-6
+        ">
+
+            <p class="text-sm text-light/60">
+                {{ certificado()!.instituicao }}
+            </p>
+
+
+            <button 
+                type="button" 
+                (click)="fecharModal()" 
+                class="
+                    cursor-pointer
+                    rounded-lg
+                    border
+                    border-secondary
+                    px-4
+                    py-2
+                    text-sm
+                    font-semibold
+                    text-light
+                    transition-all
+                    duration-200
+                    hover:bg-secondary
+                    hover:border-accent
+                    hover:text-light
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-accent">
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+}
