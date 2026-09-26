@@ -1,11 +1,7 @@
-<header
-  class="fixed left-0 top-0 z-50 w-full bg-dark text-light shadow-md"
->
+<header class="fixed left-0 top-0 z-50 w-full bg-dark text-light shadow-md">
 
   <!-- HEADER PRINCIPAL -->
-  <div
-    class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
-  >
+  <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
     <!-- LOGO -->
     <a
@@ -15,9 +11,18 @@
     >
 
       <span
-        class="flex h-9 w-9 items-center justify-center rounded-md border
-               border-accent text-sm font-semibold text-accent"
-      >
+        class="
+          flex 
+          h-9 w-9 
+          items-center 
+          justify-center 
+          rounded-md 
+          border
+          border-accent 
+          text-sm 
+          font-semibold 
+          text-accent
+      ">
         ER
       </span>
 
@@ -35,13 +40,11 @@
     <!-- NAVEGAÇÃO DESKTOP -->
     <nav class="hidden items-center gap-8 lg:flex">
 
-      <!-- HOME -->
       <a
         href="#home"
         (click)="setActiveSection('home')"
-        class="relative text-xs text-light transition-colors hover:text-accent"
-      >
-        Home
+        class="relative text-xs text-light transition-colors hover:text-accent">
+          Home
 
         @if (activeSection === 'home') {
           <span
@@ -50,14 +53,11 @@
         }
       </a>
 
-
-      <!-- SOBRE MIM -->
       <a
         href="#sobre"
         (click)="setActiveSection('sobre')"
-        class="relative text-xs text-light transition-colors hover:text-accent"
-      >
-        Sobre Mim
+        class="relative text-xs text-light transition-colors hover:text-accent">
+          Sobre Mim
 
         @if (activeSection === 'sobre') {
           <span
@@ -66,13 +66,10 @@
         }
       </a>
 
-
-      <!-- PROJETOS -->
       <a
         href="#projetos"
         (click)="setActiveSection('projetos')"
-        class="relative text-xs text-light transition-colors hover:text-accent"
-      >
+        class="relative text-xs text-light transition-colors hover:text-accent">
         Projetos
 
         @if (activeSection === 'projetos') {
@@ -82,13 +79,10 @@
         }
       </a>
 
-
-      <!-- CERTIFICADOS -->
       <a
         href="#certificados"
         (click)="setActiveSection('certificados')"
-        class="relative text-xs text-light transition-colors hover:text-accent"
-      >
+        class="relative text-xs text-light transition-colors hover:text-accent">
         Certificados
 
         @if (activeSection === 'certificados') {
@@ -98,13 +92,10 @@
         }
       </a>
 
-
-      <!-- CONTATO -->
       <a
         href="#contato"
         (click)="setActiveSection('contato')"
-        class="relative text-xs text-light transition-colors hover:text-accent"
-      >
+        class="relative text-xs text-light transition-colors hover:text-accent">
         Contato
 
         @if (activeSection === 'contato') {
@@ -120,13 +111,22 @@
     <!-- BOTÃO HAMBURGUER -->
     <button
       type="button"
-      class="flex h-9 w-9 items-center justify-center rounded-md
-             border border-accent/40 text-light transition-colors
-             hover:bg-secondary/20 lg:hidden"
+      class="
+        flex 
+        h-9 w-9 
+        items-center 
+        justify-center 
+        rounded-md
+        border 
+        border-accent/40 
+        text-light 
+        transition-colors
+        hover:bg-secondary/20 
+        lg:hidden"
       (click)="toggleMenu()"
       [attr.aria-label]="menuOpen ? 'Fechar menu' : 'Abrir menu'"
-      [attr.aria-expanded]="menuOpen"
-    >
+      [attr.aria-expanded]="menuOpen
+    ">
 
       @if (!menuOpen) {
 
@@ -172,18 +172,23 @@
   <!-- MENU MOBILE / TABLET -->
   @if (menuOpen) {
 
-    <nav
-      class="border-t border-accent/20 bg-dark shadow-lg lg:hidden"
-    >
+    <nav class="border-t border-accent/20 bg-dark shadow-lg lg:hidden">
 
       <!-- HOME -->
       <a
         href="#home"
-        class="block border-b border-accent/20 px-6 py-5 text-sm
-               text-light transition-colors hover:bg-secondary/10
-               hover:text-accent"
-        (click)="setActiveSection('home')"
-      >
+        class="
+          block 
+          border-b 
+          border-accent/20 
+          px-6 py-5 
+          text-sm
+          text-light 
+          transition-colors 
+          hover:bg-secondary/10
+          hover:text-accent"
+        (click)="setActiveSection('home')
+      ">
         Home
       </a>
 
@@ -191,11 +196,18 @@
       <!-- SOBRE MIM -->
       <a
         href="#sobre"
-        class="block border-b border-accent/20 px-6 py-5 text-sm
-               text-light transition-colors hover:bg-secondary/10
-               hover:text-accent"
-        (click)="setActiveSection('sobre')"
-      >
+        class="
+          block 
+          border-b 
+          border-accent/20 
+          px-6 py-5 
+          text-sm
+          text-light 
+          transition-colors 
+          hover:bg-secondary/10
+          hover:text-accent"
+        (click)="setActiveSection('sobre')
+      ">
         Sobre Mim
       </a>
 
@@ -203,11 +215,18 @@
       <!-- PROJETOS -->
       <a
         href="#projetos"
-        class="block border-b border-accent/20 px-6 py-5 text-sm
-               text-light transition-colors hover:bg-secondary/10
-               hover:text-accent"
-        (click)="setActiveSection('projetos')"
-      >
+        class="
+          block 
+          border-b 
+          border-accent/20 
+          px-6 py-5 
+          text-sm
+          text-light 
+          transition-colors 
+          hover:bg-secondary/10
+          hover:text-accent"
+        (click)="setActiveSection('projetos')
+      ">
         Projetos
       </a>
 
@@ -215,11 +234,18 @@
       <!-- CERTIFICADOS -->
       <a
         href="#certificados"
-        class="block border-b border-accent/20 px-6 py-5 text-sm
-               text-light transition-colors hover:bg-secondary/10
-               hover:text-accent"
-        (click)="setActiveSection('certificados')"
-      >
+        class="
+          block 
+          border-b 
+          border-accent/20 
+          px-6 py-5 
+          text-sm
+          text-light 
+          transition-colors 
+          hover:bg-secondary/10
+          hover:text-accent"
+        (click)="setActiveSection('certificados')
+      ">
         Certificados
       </a>
 
@@ -227,11 +253,16 @@
       <!-- CONTATO -->
       <a
         href="#contato"
-        class="block px-6 py-5 text-sm text-light
-               transition-colors hover:bg-secondary/10
-               hover:text-accent"
-        (click)="setActiveSection('contato')"
-      >
+        class="
+          block 
+          px-6 py-5 
+          text-sm 
+          text-light
+          transition-colors 
+          hover:bg-secondary/10
+          hover:text-accent"
+        (click)="setActiveSection('contato')
+      ">
         Contato
       </a>
 
