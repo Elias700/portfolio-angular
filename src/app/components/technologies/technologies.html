@@ -1,0 +1,164 @@
+<section 
+    id="tecnologias" 
+    class="
+        min-h-screen
+        bg-dark
+        px-6
+        py-20
+        sm:px-8
+        md:px-12
+        lg:px-16
+        xl:px-20
+        cursor-pointer
+">
+
+    <div class="mx-auto max-w-7xl">
+
+        <!-- TÍTULO -->
+        <div appScrollReveal class="mx-auto max-w-3xl text-center">
+
+            <span 
+                class="
+                    text-sm
+                    font-medium
+                    uppercase
+                    tracking-[0.2em]
+                    text-accent
+            ">
+                Tecnologias
+            </span>
+
+            <h2 
+                class="
+                    mt-3
+                    text-3xl
+                    font-bold
+                    text-light
+                    sm:text-4xl
+                    lg:text-5xl
+            ">
+                Tecnologias que estou estudando
+            </h2>
+
+            <p 
+                class="
+                    mx-auto
+                    mt-5
+                    max-w-2xl
+                    text-sm
+                    leading-7
+                    text-light/70
+                    sm:text-base
+            ">
+                Tecnologias e ferramentas que fazem parte da minha
+                evolução como desenvolvedor web.
+            </p>
+
+        </div>
+
+
+        <!-- CARDS -->
+        <div 
+            class="
+                mt-14
+                grid
+                grid-cols-1
+                gap-5
+                sm:grid-cols-2
+                lg:grid-cols-3
+                xl:grid-cols-4
+        ">
+
+            @for (tecnologia of tecnologias; track tecnologia.nome) {
+
+            <article appScrollReveal 
+                class="
+                    group
+                    flex
+                    min-h-[230px]
+                    flex-col
+                    rounded-2xl
+                    border
+                    border-secondary/40
+                    bg-secondary/10
+                    p-6
+                    transition-all
+                    duration-300
+                    hover:-translate-y-2
+                    hover:border-accent
+                    hover:bg-secondary/20
+                    hover:shadow-lg
+                    hover:shadow-accent/10
+            ">
+
+                <!-- ÍCONE -->
+                <div 
+                    class="
+                        flex
+                        h-14
+                        w-14
+                        items-center
+                        justify-center
+                        rounded-xl
+                        bg-secondary/30
+                        text-lg
+                        font-bold
+                        text-accent
+                        transition-all
+                        duration-300
+                        group-hover:bg-accent
+                        group-hover:text-dark
+                ">
+                    {{ tecnologia.icone }}
+                </div>
+
+
+                <!-- CATEGORIA -->
+                <span 
+                    class="
+                        mt-5
+                        text-xs
+                        font-medium
+                        uppercase
+                        tracking-wider
+                        text-accent/80
+                ">
+                    {{ tecnologia.categoria }}
+                </span>
+
+
+                <!-- NOME -->
+                <h3 
+                    class="
+                        mt-2
+                        text-xl
+                        font-semibold
+                        text-light
+                        transition-colors
+                        duration-300
+                        group-hover:text-accent
+                    ">
+                    {{ tecnologia.nome }}
+                </h3>
+
+
+                <!-- DESCRIÇÃO -->
+                <p 
+                    class="
+                        mt-3
+                        text-sm
+                        leading-6
+                        text-light/60
+                ">
+                    {{ tecnologia.descricao }}
+                </p>
+
+            </article>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
